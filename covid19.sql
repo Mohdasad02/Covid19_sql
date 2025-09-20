@@ -4,7 +4,6 @@ COVID-19 Worldwide Data Exloration
 Using - Joins, CTE, Temp Tables, Windows functions, Aggregate functions, creating views, Converting data types
 */
 
-
 -- 1) What is the Mortality rate - total deaths divided by total cases
 SELECT continent, location, date, total_cases, total_deaths, (total_deaths * 1.0 /total_cases) * 100 as mortality_rate
 FROM coviddeaths
@@ -151,3 +150,4 @@ JOIN covidvaccinations vac
 where dea.continent IS NOT NULL)
 SELECT *, (RollingCountofPeopleVaccinated*1.0/population) * 100 AS PercentageofVaccinatedPeople
 FROM PopVsVac
+
